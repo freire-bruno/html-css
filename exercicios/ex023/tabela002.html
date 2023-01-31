@@ -14,6 +14,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -26,14 +27,38 @@
             color: white;
         }
 
+        thead > tr> th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        }
+
+        
         .num {
             text-align: right;
         }
         
         tfoot > tr > td {
-            text-align: center;
+            text-align: right;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightgray;
+            
         }
         
+        tbody > tr:nth-child(odd) {
+            background-color: white;
+
+        }
+        
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
     </style>
 </head>
 <body>
@@ -42,6 +67,7 @@
         Anatomia para tabelas grandes:
 
         Table
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -51,10 +77,11 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População (Prévia 2022)</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px">População (Prévia 2022)</th>
             </tr>
         </thead>
         <tbody>
@@ -170,12 +197,24 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td><strong>207 883 699</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>207.883.699</strong></td>
             </tr>
-
+            
         </tfoot>
     </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam perspiciatis saepe adipisci corrupti dicta tenetur ipsam magnam consectetur velit laudantium asperiores, suscipit quod sunt eligendi eaque voluptatibus, excepturi laborum aperiam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero dolore reprehenderit enim, molestiae culpa eaque tempore, sint, quo rerum natus neque dolorem modi? Voluptates reprehenderit corrupti, quod repudiandae animi Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt aliquid magni rerum facilis corrupti omnis totam. Reiciendis quos, iure nostrum odit ad laboriosam molestias dignissimos aspernatur aliquid quia! Quos, quod. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reiciendis expedita dolore quaerat sed, officiis sequi quasi consequatur voluptatem officia quia possimus dolorum labore hic quod dolorem. Magnam, odit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque impedit natus hic perspiciatis, consequuntur fugiat beatae voluptatibus obcaecati! Est quibusdam impedit tempora voluptatem accusantium ea distinctio mollitia, odio aliquid inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio architecto aliquam, est amet dolor exercitationem ea quae iusto accusantium ab, porro deserunt eum eos incidunt ut itaque aliquid optio officiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, fuga optio beatae expedita dolores recusandae corrupti voluptate, veritatis dolore hic deserunt iste accusantium veniam asperiores fugiat enim dignissimos cupiditate distinctio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, repellat veritatis exercitationem animi labore, laudantium eveniet ea impedit magni provident porro et rem excepturi libero tempore veniam debitis? Est, perspiciatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti sint consequatur, ullam quod rerum vitae commodi quibusdam ad, delectus in dolorem voluptatum excepturi! Dolores blanditiis, reprehenderit nihil rerum eveniet deleniti?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo reprehenderit ipsam incidunt. Quisquam impedit velit voluptate fugit, cum ipsum nemo similique amet architecto, illo incidunt in sequi porro ratione? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, animi! Rem architecto, id aperiam aut cum natus beatae nemo cumque nobis ipsa aliquid soluta vel porro cupiditate sed? Esse, distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi architecto commodi officiis explicabo ullam deserunt natus deleniti porro ipsa ut expedita, totam quibusdam sed fugiat iste id. Repudiandae, officiis rem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim rerum vel sint illo architecto, iste officia, quaerat nemo facere delectus dolorem possimus id, accusamus illum laborum autem ex dolores provident?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo reprehenderit ipsam incidunt. Quisquam impedit velit voluptate fugit, cum ipsum nemo similique amet architecto, illo incidunt in sequi porro ratione? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, animi! Rem architecto, id aperiam aut cum natus beatae nemo cumque nobis ipsa aliquid soluta vel porro cupiditate sed? Esse, distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi architecto commodi officiis explicabo ullam deserunt natus deleniti porro ipsa ut expedita, totam quibusdam sed fugiat iste id. Repudiandae, officiis rem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim rerum vel sint illo architecto, iste officia, quaerat nemo facere delectus dolorem possimus id, accusamus illum laborum autem ex dolores provident?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo reprehenderit ipsam incidunt. Quisquam impedit velit voluptate fugit, cum ipsum nemo similique amet architecto, illo incidunt in sequi porro ratione? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, animi! Rem architecto, id aperiam aut cum natus beatae nemo cumque nobis ipsa aliquid soluta vel porro cupiditate sed? Esse, distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi architecto commodi officiis explicabo ullam deserunt natus deleniti porro ipsa ut expedita, totam quibusdam sed fugiat iste id. Repudiandae, officiis rem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim rerum vel sint illo architecto, iste officia, quaerat nemo facere delectus dolorem possimus id, accusamus illum laborum autem ex dolores provident?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo reprehenderit ipsam incidunt. Quisquam impedit velit voluptate fugit, cum ipsum nemo similique amet architecto, illo incidunt in sequi porro ratione? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, animi! Rem architecto, id aperiam aut cum natus beatae nemo cumque nobis ipsa aliquid soluta vel porro cupiditate sed? Esse, distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi architecto commodi officiis explicabo ullam deserunt natus deleniti porro ipsa ut expedita, totam quibusdam sed fugiat iste id. Repudiandae, officiis rem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim rerum vel sint illo architecto, iste officia, quaerat nemo facere delectus dolorem possimus id, accusamus illum laborum autem ex dolores provident?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro illo reprehenderit ipsam incidunt. Quisquam impedit velit voluptate fugit, cum ipsum nemo similique amet architecto, illo incidunt in sequi porro ratione? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, animi! Rem architecto, id aperiam aut cum natus beatae nemo cumque nobis ipsa aliquid soluta vel porro cupiditate sed? Esse, distinctio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi architecto commodi officiis explicabo ullam deserunt natus deleniti porro ipsa ut expedita, totam quibusdam sed fugiat iste id. Repudiandae, officiis rem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim rerum vel sint illo architecto, iste officia, quaerat nemo facere delectus dolorem possimus id, accusamus illum laborum autem ex dolores provident?</p>
 
 
     
